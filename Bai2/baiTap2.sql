@@ -19,9 +19,13 @@ pPrice float
 );
 create table OrderDetail(
 oID varchar(20) not null,
-pID varchar(20) not null,class
+pID varchar(20) not null,
 odQTY int default 1,
 primary key(oID,pID),
 foreign key (oID) references Order1(oID),
 foreign key (pID) references Product(pID)
 );
+
+alter table Customer
+ modify cID int;
+ 
